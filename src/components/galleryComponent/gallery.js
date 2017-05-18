@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Gallery extends Component {
   render() {
-  	var visible = {
+  	const visible = {
     visibility: "visible"
 		};
     return (

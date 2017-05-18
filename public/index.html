@@ -4,65 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="">
-    <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,"") + " js";</script>
     <title>Portfolio of Enrique Soler</title>
   </head>
   <body>
 
     <div id="root"></div>
-  <script src="js/script-combined.js" async=""></script>
-      <script>
-      // close lightbox
-      function lightbox_close() {
-        
-      clearTimeout(timeout_lightbox_opened);
-      clearTimeout(timeout_scroll_icon);
-      
-      is_lightbox_opened = false;
-      
-      allow_body_scroll();
-      $(document).off("keyup mouseup");
-      browserHas.pushstate && history.replaceState(null, null, "./");
-      
-      el_lightbox_close.removeClass(classname_lightbox_opened);
-      el_lightbox.removeClass(classname_lightbox_opened);
-      el_main.removeClass(classname_lightbox_opened);
-      
-      timeout_lightbox_closed = setTimeout(function(){
-        document.title = page_title;
-        el_lightbox.scrollTop(0).hide();
-        el_lightbox_close.hide();
-        el_project_link.hide();
-        el_scroll_icon.removeClass(classname_scroll_icon_visible);
-        el_project_images.empty();
-      }, 250);
-      
-      }
-      
-      
-      
-      /* open/close lightbox on hashchange */
-      $(window).on("hashchange", function(){
-      
-      var currentHash = location.hash.substring(2),
-        project_id = currentHash.substring(currentHash.lastIndexOf("/") + 1, currentHash.length);
-      
-      (currentHash && $(".js-project-id." + project_id).length) ? lightbox_open(project_id) : is_lightbox_opened && lightbox_close();
-      
-      ga("send", "pageview", {"page": location.pathname + location.search  + currentHash});
-      
-      }).trigger("hashchange");
-      
-      </script>
-
-      <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-45938118-1', 'auto');
-      ga('send', 'pageview');
-      </script>
+ 
   </body>
 </html>
